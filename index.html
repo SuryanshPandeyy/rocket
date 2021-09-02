@@ -5,7 +5,10 @@
  <meta charset="UTF-8">
  <meta http-equiv="X-UA-Compatible" content="IE=edge">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Game</title>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+  integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer" />
+ <title>Rocket Game</title>
  <style>
   body {
    user-select: none;
@@ -33,9 +36,24 @@
    margin: 1rem 0;
   }
 
+  #right{
+   position: relative;
+   left: 0.5rem;
+   top: 3rem;
+  }
+  #left{
+   position: relative;
+   right: 3.5rem;
+   top: -2rem;
+  }
+  #bottom{
+   position: relative;
+   right: 3rem;
+  }
+
   button {
    width: fit-content;
-   padding: 1rem 2rem;
+   padding: 1rem 1rem;
    background: royalblue;
    color: white;
    border: none;
@@ -49,12 +67,12 @@
 
  <div class="gameBtn">
   <div class="btn">
-   <button onmousedown="moveup()" ontouchstart="moveup()" onmouseup="clearmove()">Up</button>
-   <button onmousedown="movedown()" ontouchstart="movedown()" onmouseup="clearmove()">Down</button>
+   <button id="up" onmousedown="moveup()" ontouchstart="moveup()" onmouseup="clearmove()"> <i class="fas fa-arrow-up"></i> </button>
+   <button id="right" onmousedown="moveright()" ontouchstart="moveright()" onmouseup="clearmove()"> <i class="fas fa-arrow-right"></i> </button>
   </div>
   <div class="btn">
-   <button onmousedown="moveleft()" ontouchstart="moveleft()" onmouseup="clearmove()">Left</button>
-   <button onmousedown="moveright()" ontouchstart="moveright()" onmouseup="clearmove()">Right</button>
+   <button id="left" onmousedown="moveleft()" ontouchstart="moveleft()" onmouseup="clearmove()"> <i class="fas fa-arrow-left"></i> </button>
+   <button id="bottom" ononmousedown="movedown()" ontouchstart="movedown()" onmouseup="clearmove()"> <i class="fas fa-arrow-down"></i> </button>
   </div>
  </div>
 
